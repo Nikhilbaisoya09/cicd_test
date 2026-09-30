@@ -47,3 +47,4 @@ jobs:
       - uses: hashicorp/setup-terraform@v4
       - run: terraform init -backend-config="key=prod.tfstate"
       - run: terraform apply -auto-approve -var-file=envs/prod.tfvars
+      - run: terraform destroy -auto-approve -var-file=envs/prod.tfvars
